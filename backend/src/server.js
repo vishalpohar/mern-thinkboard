@@ -10,7 +10,10 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5001;
+<<<<<<< HEAD
 const __dirname = path.resolve();
+=======
+>>>>>>> 1c00eb91c18fa94691b11200bacaddd5109a515c
 
 // middleware
 if (process.env.NODE_ENV !== "production") {
@@ -30,6 +33,7 @@ app.use(express.json()); // this middleware will parse JSON bodies: req.body
 
 app.use("/api/notes", notesRoutes);
 
+<<<<<<< HEAD
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
@@ -38,6 +42,8 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
+=======
+>>>>>>> 1c00eb91c18fa94691b11200bacaddd5109a515c
 connectDB().then(() => {
   app.listen(PORT, () => {
     console.log("Server started on PORT: ", PORT);
